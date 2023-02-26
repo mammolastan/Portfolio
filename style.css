@@ -9,7 +9,7 @@
 body {
   background: #8ecae6ff;
 }
-header {
+header,footer {
     text-align: center;
     padding: 30px 0;
     background-color: #219ebcff;
@@ -39,7 +39,14 @@ a:active {
   margin: auto;
   padding: 20px;
   color: #023047ff;
+}
+/* Add bottom border for all but final */
+.containerPrimary:not(:last-of-type) {
   border-bottom: 1px solid #fb8500ff;
+}
+
+hr {
+border-bottom: 1px solid #fb8500ff;
 }
 
 #headshot {
@@ -62,7 +69,7 @@ a:active {
     letter-spacing: .15em; /* Adjust as needed */
     animation: 
       typing 3.5s steps(40, end),
-      blink-caret .75s step-end 5;
+      blink-caret .75s step-end 9;
   }
   
   /* The typing effect */
@@ -71,10 +78,13 @@ a:active {
     0% {
         width: 0;
       }
-      30% {
+      15% {
+        width: 0;
+      }
+      45% {
         width: 43%;
       }
-      72% {
+      60% {
         width: 43%;
       }
       100% {
@@ -85,6 +95,6 @@ a:active {
   /* The typewriter cursor effect */
   @keyframes blink-caret {
     from, to { border-color: transparent }
-    50% { border-color: orange; }
+    50% { border-color: #fb8500ff; }
   }
   /* End Typing effect */
